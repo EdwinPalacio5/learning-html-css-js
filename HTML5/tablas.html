@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+    <link rel="icon" href="favicon.ico">
+<style>
+    th{
+        background: burlywood;
+    }
+
+    .fila{
+        background: coral;
+    }
+
+    .columna{
+        background: cornflowerblue;
+    }
+</style>
+
+</head>
+<body>
+    <header>
+        <nav id="nav">
+            <a href="./index.html">Inicio</a>
+            <a href="./etiquetas_seccion.html">Etiquetas de Seccion</a>
+            <a href="./etiquetas_texto.html">etiquetas de Texto</a>
+            <a href="./etiquetas_contenido_embebido.html">Etiquetas de contenido embebido</a>
+            <a href="./rutas_enlaces.html">Rutas y Enlaces</a>
+            <a href="./anclas.html">Anclas</a>
+            <a href="./tablas.html">Tablas</a>
+        </nav>
+    </header>
+
+    <table>
+        <!-- caption es la forma adecuado de agregar un titulo a un tabla -->
+        <caption>Horario</caption>
+
+        <!-- con colgroup podemos agrupar columnas-->
+        <colgroup>
+            <!-- con el atributo span indicamos la cantidad de columnas que representa
+                 en este caso, se quiere agrupar la cuarta columna-->
+            <col span="3">
+            <col class="columna">
+        </colgroup>
+
+        <!-- Encabezado de tabla-->
+        <thead>
+            <!-- tr: row/fila-->
+            <tr>
+                <!-- th: celda de encabezado -->
+                <th>Hora</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+                <th>Sabado</th>
+            </tr>
+        </thead>
+
+        <!-- Cuerpo de tabla -->
+        <tbody>
+            <!-- tr: row/fila-->
+            <tr class="fila">
+                <!-- td: celda de datos-->
+                <td>06:20-08:00</td>
+                <td>HTML</td>
+                <td>CSSS</td>
+                <td>JS</td>
+                <td>PHP</td>
+                <td>UML</td>
+                <td>BD</td>
+            </tr>
+            <tr>
+                <td>08:05-09:45</td>
+                <td>HTML</td>
+                <td>CSSS</td>
+                <td>JS</td>
+                <td>PHP</td>
+                <td>UML</td>
+                <td>BD</td>
+            </tr>
+            <tr>
+                <td>09:50-11:30</td>
+                <td>HTML</td>
+                <td>CSSS</td>
+                <td>JS</td>
+                <td>PHP</td>
+                <td>UML</td>
+                <td>BD</td>
+            </tr>
+            <tr>
+                <!-- rowspan: une celdas verticalmente-->
+                <td rowspan="2">11:35-01:15</td>
+                <!-- colspan: une celdas horizontalmente-->
+                <td colspan="6"> LUNCH</td>
+            </tr>
+            <tr>
+                <td colspan="6">CAFEZASO</td>
+            </tr>
+            <tr>
+                <td>01:20-03:00</td>
+                <td>HTML</td>
+                <td>CSSS</td>
+                <td>JS</td>
+                <td>PHP</td>
+                <td>UML</td>
+                <td>BD</td>
+            </tr>
+            <tr>
+                <td>03:05-04:45</td>
+                <td>HTML</td>
+                <td>CSSS</td>
+                <td>JS</td>
+                <td>PHP</td>
+                <td>UML</td>
+                <td>BD</td>
+            </tr>
+
+            <tr>
+                <td>04:50-06:30</td>
+                <td>HTML</td>
+                <td>CSSS</td>
+                <td>JS</td>
+                <td>PHP</td>
+                <td>UML</td>
+                <td>BD</td>
+            </tr>
+            <tr>
+                <td>06:35-08:15</td>
+                <td>HTML</td>
+                <td>CSSS</td>
+                <td>JS</td>
+                <td>PHP</td>
+                <td>UML</td>
+                <td>BD</td>
+            </tr>
+        </tbody>
+
+        <!-- Pie de tabla-->
+        <tfoot>
+            <tr>
+                <td colspan="7">
+                    Horario ciclo 10. AP16014
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
