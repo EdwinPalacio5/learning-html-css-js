@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="icon" href="./favicon.ico">
+    <style>
+        input,legend, select, textarea, fieldset{
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        } 
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="./index.html">Inicio</a>
+            <a href="./etiquetas_seccion.html">Etiquetas de Seccion</a>
+            <a href="./etiquetas_texto.html">etiquetas de Texto</a>
+            <a href="./etiquetas_contenido_embebido.html">Etiquetas de contenido embebido</a>
+            <a href="./rutas_enlaces.html">Rutas y Enlaces</a>
+            <a href="./anclas.html">Anclas</a>
+            <a href="./tablas.html">Tablas</a>
+            <a href="./formularios.html">Formularios</a>
+        </nav>
+    </header>
+    
+    <form action="#">
+        <caption>Formulario</caption>
+        
+        <fieldset>
+            <legend>Formas de usar label</legend>
+
+            <!-- Input dentro del label -->
+            <label>Input dentro del label
+                <!-- Input por default es type text-->
+                <!-- required: indica que el campo es requerido de llenar-->
+                <!-- maxlength/minlength: indica la cantidad maxima/minima de caracteres-->
+                <input required minlength="7" maxlength="7">
+            </label>
+    
+            <!-- Input fuera de label, vinculado con el atributo for-->
+            <!-- TEXT: Input para textos-->
+            <label for="fortext">Input fuera de label, vinculado con el atributo for</label>
+            <!-- disabled: indica que un campo esta deshabilitado, por lo que no deja ingresar datos-->
+            <input type="text" id="fortext" disabled>
+
+        </fieldset>
+        
+        
+        <!-- NUMBER: Input numerico-->
+        <label for="fornumber">Input numerico</label>
+        <!-- min/max: indica el valor minimo/maximo de un numero ingresado-->
+        <!-- placeholder: se indica un mensaje en la caja de texto, el cual se borra al comenzar a escribir en esta-->
+        <input type="number" id="fornumber" min="18" max="45" placeholder="Ingrese un numero entre 18 y 45">
+
+        <!-- PASSWORD: Input para contraseñas-->
+        <label for="forpassword">Input password</label>
+        <!-- readonly: vuelve un campo de solo lectura-->
+        <input type="password" id="forpassword" value="hola" readonly>
+
+        <!-- TextArea-->
+        <label for="fortextarea">Input de tipo textarea</label>
+        <textarea id="fortextarea" cols="30" rows="10"></textarea>
+        <!-- RADIO: Input de radiobutton-->
+        <!-- Para que el radio funcione se tiene que poner el mismo name a todos los atributos del radio-->
+        <legend>Opciones por radio button</legend>
+
+        <label for="opcion1">Opcion 1</label>
+        <input type="radio" id="opcion1" name="radio" checked>
+
+        <label for="opcion2">Opcion 2</label>
+        <input type="radio" id="opcion2" name="radio">
+
+        <!-- CHECKBOX-->
+        <legend>Opciones por checkbox</legend>
+
+        <label for="opcioncb1">Opcion 1</label>
+        <input type="checkbox" id="opcioncb1" checked>
+
+        <label for="opcioncb2">Opcion 2</label>
+        <input type="checkbox" id="opcioncb2" checked>
+
+        <!-- SELECT -->
+        <!-- Con optgroup se crean grupos de opciones-->
+        <!-- Selected: Se selecciona un opción inicialmente-->
+        <label for="forselect">Input de tipo Select</label>
+        <select id="forselect">
+            <optgroup label="tecnologias web">
+                <option value="1">HTML</option>
+                <option value="2" selected>CSS</option>
+                <option value="3">JS</option>
+            </optgroup>
+            <optgroup label="tecnologias para desarrollo movil">
+                <option value="4">ANDROID</option>
+                <option value="5">FLUTTER</option>
+                <option value="6">IONIC</option>
+            </optgroup>
+            <optgroup label="tecnologías backend">
+                <option value="7">PYTHON</option>
+                <option value="8">PHP</option>
+                <option value="9">JAVA</option>
+            </optgroup>
+        </select>
+
+        <!-- SELECT -->
+        <!-- Con optgroup se crean grupos de opciones-->
+        <label for="forselectmultiple">Input de tipo Select multiple, presionar control</label>
+        <select multiple size="12" id="forselectmultiple">
+            <optgroup label="tecnologias web">
+                <option value="1">HTML</option>
+                <option value="2" selected >CSS</option>
+                <option value="3" selected >JS</option>
+            </optgroup>
+            <optgroup label="tecnologias para desarrollo movil">
+                <option value="4">ANDROID</option>
+                <option value="5">FLUTTER</option>
+                <option value="6">IONIC</option>
+            </optgroup>
+            <optgroup label="tecnologías backend">
+                <option value="7">PYTHON</option>
+                <option value="8">PHP</option>
+                <option value="9">JAVA</option>
+            </optgroup>
+        </select>
+
+        <!-- DATE-->
+        <label for="fordate">Input de fecha</label>
+        <input type="date" id="fordate">
+
+        <!-- DATETIME-LOCAL-->
+        <label for="fordatetime">Input de fecha y hora</label>
+        <input type="datetime-local" id="fordatetime">
+
+        <!-- TIME-->
+        <label for="fortime"> Input de hora</label>
+        <input type="time" id="fortime">
+
+        <!-- MONTH -->
+        <label for="formonth">Input para mes</label>
+        <input type="month" id="formonth">
+
+        <!-- WEEK -->
+        <label for="forweek">Input para semana</label>
+        <input type="week" id="forweek">
+
+        <!-- COLOR -->
+        <label for="forcolor">Input para color</label>
+        <input type="color" id="forcolor">
+
+        <!-- EMAIL: valida que lo ingresado sea un email-->
+        <label for="foremail">Input de email</label>
+        <input type="email" id="email">
+
+        <!-- FILE-->
+        <label for="forfile">Input para archivos</label>
+        <input type="file" id="forfile">
+
+        <!-- RANGE -->
+        <label for="forrange">Input para rango de numerico</label>
+        <input type="range" id="forrange" min="1" max="10" step="1">
+
+        <!-- TEL: En celulares el teclado se muestra el teclado numerico para ingresar numeros telefónicos -->
+        <label for="fortel">Input para ingresar numeros telefónicos</label>
+        <input type="tel" id="fortel">
+
+        <!-- SEARCH: Se muestra un "x" para eliminar el texto ingresado-->
+        <label for="forsearch">Input para busquedas</label>
+        <input type="search" id="forsearch">
+
+        <!-- DATALIST: muestra las opciones indicadas del datalist en el input list-->
+        <label for="fordatalist">Input datalist</label>
+        <input list="browser" id="fordatalist">
+        <datalist id="browser">
+            <option value="Chrome">
+            <option value="Edge">
+            <option value="Firefox">
+        </datalist>
+        
+        <!-- SUBMIT: Input para enviar formulario-->
+        <input type="submit" value="Enviar formulario">
+
+        <!-- RESET: Input para resetear campos del formulario-->
+        <input type="reset" value="Restablecer formulario">
+
+    </form>
+
+</body>
+</html>
