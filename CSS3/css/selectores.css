@@ -1,0 +1,85 @@
+/*Selectores universales
+*{
+    color: green;
+}
+*/
+
+/*Selector por etiqueta
+h1{
+    color:red;
+}
+
+p{
+    color: black;
+}
+*/
+
+/*Selector de clase
+.pag1{
+    color:green;
+}
+*/
+
+/*Selector por ID
+#pag1{
+    color: green;
+}
+*/
+
+/*-----------------------------------------------------------
+-------------------Selector de atributo ---------------------
+[href]{
+    color: green;
+}
+*/
+
+/*Selector con atributo con un valor en especifico
+[href="/"]{
+    color: green;
+}
+*/
+
+/* Seleccionar elemento con atributo al menos ese valor una vez
+[class~="admin"]{
+    color: green;
+}
+*/
+
+/* Seleccionar los elementos que tienen ese atributo y 
+   EXACTAMENTE ese valor o empieze por el valor seguido de un guión
+[class|="admin"]{
+    color: green;
+}
+*/
+
+/* Seleccionar los elementos que tienen ese atributo y empiezan por ese valor
+[class^="admin"]{
+    color:green;
+}
+*/
+
+/* Seleccionar los elementos que tienen ese atributo y terminan por ese valor
+[class$="admin"]{
+    color:green;
+}
+*/
+
+/* Seleccionar los elementos que tienen ese atributo y contengan ese valor
+[class*="admin"]{
+    color:green;
+}
+*/
+/*------------------------------------------------------------------------
+---------------------- SELECTOR de descendencia---------------------------
+Selecciona los elementos de etiqueta p que se encuentran dentro de div
+div p{
+    color: green;
+}
+*/
+
+
+/*Selecciona los elementos h1 cuyo padre directo sea div
+div > h1{
+    color: green;
+}
+*/
