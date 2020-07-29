@@ -1,0 +1,100 @@
+.box{
+    background: green;
+    width: 200px;
+    height: 200px;
+}
+
+.model{
+    /*Padding: Espacio que se encuentra entre el contenido y el borde*/
+    padding: 20px; /*Padding de 20 px a top, right, bottom, left*/
+
+    /*Margin: Espacio que se encuentra entre el elemento con los demás elementos*/
+    margin: 20px; /*Margin de 20 px a top, right, bottom, left*/
+
+    /*Border: Espacio que envuelve el elemento*/
+    border: 20px solid yellowgreen; /*Border de 20 px de ancho, estilo solido, y color yellowgreene a top, right, bottom, left**/
+    
+    /*Outline: Espacio que se inicia desde el borde hasta el ancho que se le indique*/
+    outline: 10px solid goldenrod; /*Outline de 10 px de ancho, estilo solido, y color goldenrod a top, right, bottom, left**/
+}
+
+/*Distintas formas de aplicar padding
+  Atributo: width*/
+.padding{
+    padding: 20px; /*Aplica a top, right, bottom, left*/
+
+    padding: 20px 30px; /*Aplica 20px a top,bottom y 30px a right, left*/
+
+    padding: 20px 30px 10px; /*Aplica 20px a top, 30px a right, left, y 10px a bottom*/
+    
+    padding: 20px 30px 10px 40px; /*Aplica 20px a top, 30px a right, 10px a bottom y 40px a left*/
+    
+    /*o bien por separado*/
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+/*Distintas formas de aplicar margin
+  Atributo: width
+*/
+
+.margin{
+    margin: 20px; /*Aplica a top, right, bottom, left*/
+
+    margin: 20px 30px; /*Aplica 20px a top,bottom y 30px a right, left*/
+
+    margin: 20px 30px 10px; /*Aplica 20px a top, 30px a right, left, y 10px a bottom*/
+    
+    margin: 20px 30px 10px 40px; /*Aplica 20px a top, 30px a right, 10px a bottom y 40px a left*/
+    
+    /*o bien por separado*/
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+/*Distintas formas de aplicar border
+  Atributos de border: width, style, color
+*/
+
+.border{
+    /*Border de 20 px de ancho, estilo solido, y color yellowgreene a top, right, bottom, left**/
+    border: 20px solid yellowgreen; 
+    
+    /*Por lado*/
+    border-top: 10px solid black;
+
+    /*Por lado y atributo: color, style, width*/
+    border-top-color: black;
+    border-bottom-color: black;
+
+    border-left-style: groove;
+    border-right-style: ridge;
+
+    border-top-width: 20px;
+
+    /*Para agregar borde redondeado*/
+    border-radius: 10px;
+
+    /*Borde redondeado en una esquina especifica*/
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+    padding: 20px;
+}
+
+/*Distintas formas de aplicar outline
+  Atributos de outline: width, style, color, offset
+  Los atributos width, style y color se trabajan de igual manera que border
+*/
+.outline{
+    margin: 30px;
+    padding: 30px;
+    /*Outline de 20 px de ancho, estilo solido, y color yellowgreene a top, right, bottom, left**/
+    outline: 5px solid yellow;
+    outline-offset: 20px; /*desde el border*/
+    outline-offset: -20px; 
+}

@@ -1,0 +1,29 @@
+/*Ocupando inherit se puede heredar los estilos del elemento padre*/
+p{
+    color: green;
+}
+a{
+    color: inherit;
+}
+
+/*Peso de especificidad
+Etiqueta                0001
+Clases y Pseudoclases   0010
+ID                      0100
+Estilo de línea         1000
+!important              Gana a todo
+*/
+
+/*Ejemplo de !important: NO RECOMENDADO*/
+p{
+    color: red !important;
+}
+
+/*Cascada es que los valores de las atributos en los selectores se van 
+  sobreescriendo mientras se le el archi css
+  
+  Cascada está relacionada con la especificidad dado que la especificidad 
+  gana a Cascada, es decir que no importa el orden en que se lea
+  
+  Resumen de como se resuelven los conflictos de estilos:
+    !important -> Especifidad -> Cascada*/
