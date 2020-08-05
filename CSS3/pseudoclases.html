@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclases</title>
+    <link rel="stylesheet" href="./css/pseudoclases.css">
+</head>
+<body>
+    <form action="#">
+        <h1>Pseudoclases</h1>
+        <h2>Dinamicos</h2>
+        <p><em>:link</em> permite agregar estilo a los links que no han sido abiertos</p>
+        <a href="#elemento-target" class="enlace link">Pseudoclase link</a>
+        
+        <p><em>:visited</em> permite agregar estilo a los links que han sido visitados</p>
+        <a href="#" class="enlace visited">Pseudoclase visited</a>
+        
+        <p><em>:active</em> permite agregar estilo al link cuando este es presionado</p>
+        <a href="#" class="enlace active">Pseudoclase active</a>
+        <a href="#" class="button active">Button</a>
+
+        <p><em>:hover</em> permite agregar estilo a un elemento cuando se pasa el mouse sobre este</p>
+        <a href="#" class="button hover">Button</a>
+
+        <p><em>:focus</em> permite agregar estilo a un elemento cuando este tiene el foco</p>
+        <input type="text" class="focus">
+
+        <p><em>:target</em> permite agregar estilo a un elemento cuando este es el target</p>
+        <p id="elemento-target" class="elemento-target">Elemento con target</p>
+
+        <p><em>:lang(param)</em> permite agregar estilo a un elemento dependiendo del atributo <em>lang='param'</em></p>
+        <p class="lang" lang="es">Texto en ingles</p>
+        <p class="lang" lang="en">Texto en español</p>
+
+        <h2>UI Estados</h2>
+        <label for="enabled">Enabled</label>
+        <input type="text" id="enabled" class="input">
+
+        <label for="disabled">Disabled</label>
+        <input type="text" id="disabled" class="input" disabled>
+
+        <label for="in_range">In-range | Out-of-range</label>
+        <input type="number" id="in_range" class="input" min="3">
+        <span></span>
+
+        <label for="required">required</label>
+        <input type="text" id="required" class="input" required>
+        
+
+        <label for="optional">optional</label>
+        <input type="text" id="optional" class="input">
+
+        <label for="valid">valid</label>
+        <input type="email" id="valid" class="input" value="example@gmail.com">
+        
+
+        <label for="invalid">invalid</label>
+        <input type="email" id="invalid" class="input" value="valor invalido">
+
+        <label for="read-only">read-only</label>
+        <input type="email" id="read-only" class="input" value="Read Only" readonly>
+        
+
+        <label for="read-write">read-write</label>
+        <input type="email" id="read-write" class="input" value="Read Write">
+
+        <label for="checked">Checked</label>
+        <input type="checkbox" id="checked" class="check">
+        <span></span>
+
+        <input type="submit">
+    </form>
+      
+
+</body>
+</html>

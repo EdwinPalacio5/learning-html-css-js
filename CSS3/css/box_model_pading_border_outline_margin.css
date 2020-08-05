@@ -91,10 +91,8 @@
   Los atributos width, style y color se trabajan de igual manera que border
 */
 .outline{
-    margin: 30px;
-    padding: 30px;
-    /*Outline de 20 px de ancho, estilo solido, y color yellowgreene a top, right, bottom, left**/
+    /*Outline de 5px de ancho, estilo solido, y color yellowgreene a top, right, bottom, left**/
     outline: 5px solid yellow;
-    outline-offset: 20px; /*desde el border*/
-    outline-offset: -20px; 
+    outline-offset: 20px; /*desde el border hacia afuera (positivo)*/
+    outline-offset: -20px; /*desde el border hacia dentro (negativo)*/
 }

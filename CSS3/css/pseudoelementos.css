@@ -1,0 +1,45 @@
+/*  Pseudoelementos
+    En elementos de bloque se pueden todo los pseudoelementos
+    En elementos de linea solamente selection, before y after
+
+    -first-letter: Da estilos a la primera letra
+    -first-line: Da estilos a la primera linea
+    -selection: Da estilos a lo seleccionado
+    -before: agrega un elemento antes
+    -after: agrega un elemento después
+*/
+
+
+.first-letter::first-letter{
+    color: green;
+    font-size: 2em;
+}
+
+.first-line::first-line{
+    color: blue;
+}
+
+.selection::selection{
+    color: blue;
+    background: black;
+}
+
+.before::before{
+    content: 'Before: ';
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    color: blanchedalmond;
+    background: black;
+}
+
+.after::after{
+    content: ' :After';
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    color: blanchedalmond;
+    background: black;
+}

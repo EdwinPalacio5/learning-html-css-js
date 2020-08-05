@@ -1,0 +1,37 @@
+/*
+    Display: permite modificar el comportamiento de un elemento (de linea, de bloque)
+
+    Elementos en linea:
+    - Se ajustan a su contenido, 
+    - no puede establecerse width ni height
+    - Solamente funciona el margin horizontal
+    - padding si funciona, pero no empuja a los otros elementos    
+
+    atributos de display:
+        - inline: permite que un elemento se comporte como elemento de linea
+        - block: permite que un elemento se comporte como elemento de bloque
+        - inline-block: Permite que un elemento sea inline y tenga las características 
+                        de los elementos de bloque
+        - none: Permite que un elemento se oculte y que su espacio no sea reservado
+
+        - flex
+        - grid
+*/
+
+.inline{
+    background: greenyellow;
+
+    display: inline-block; /*El elemento inline se mantiene como inline y ya se puede aplicar margin, height, etc*/
+    height: 50px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.block{
+    background: green;
+    display: inline; /*El elemento block se convierte a inline*/
+}
+
+.none{
+    display: none;
+}

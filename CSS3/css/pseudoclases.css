@@ -1,0 +1,207 @@
+/*  Pseudoclases
+    ----------------------------------------------------------------------------------------
+    ----------------------------------- Dinamicos ------------------------------------------
+    ----------------------------------------------------------------------------------------
+
+        - link (links)
+        - visited (links)
+        - active (links)
+        - hover
+        - focus
+        - target
+*/
+.enlace{
+    display: inline-block;
+}
+
+/* Link: permite agregar estilo a los links que no han sido abiertos*/
+.link:link{
+    color: chocolate;
+}
+/* Visited: permite agregar estilo a los links que han sido visitados */
+.visited:visited{
+    color: crimson;
+}
+/* Active: permite agregar estilo al link cuando este es presionado */
+.active:active{
+    transform: scale(0.9);
+}
+
+/*Estilos del boton*/
+.button{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: red;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Hover:  permite agregar estilo a un elemento cuando se pasa el mouse sobre este*/
+.hover:hover{
+    color: red;
+    background: white;
+    border: 1px solid;
+}
+
+/* Focus: permite agregar estilo a un elemento cuando este tiene el foco*/
+.focus:focus{
+    background: seagreen;
+    color: white;
+}
+/* :target representa un elemento único (el elemento objetivo) con un id que coincide 
+    con el fragmento de la URL. por ejemplo:
+    
+    http://www.example.com/index.html#section2
+    
+    En la siguiente URL el target indica al elemento con id selection2*/
+
+.elemento-target:target{
+    font-size: 4em;
+}
+
+
+/* Lang: permite agregar estilo a un elemento dependiendo del atributo lang='param'*/
+.lang:lang(es){
+    color: blue;
+}
+
+.lang:lang(en){
+    color: red;
+}
+
+/* -----------------------------------------------------------------------------------------
+    --------------------- UI Estado: Para elementos de formulario --------------------------
+    ----------------------------------------------------------------------------------------
+
+    - :enabled
+    - :disabled
+    
+    - :checked
+
+    - :in-range
+    - :out-of-range
+
+    - :required
+    - :optional
+
+    - :valid
+    - :invalid
+
+    - :read-only
+    - :read-write
+*/
+
+/*Estilos de input*/
+.input{
+    display: block;
+    margin: 10px;
+    border-radius: 4px;
+    width: 50%;
+    height: 25px;
+}
+
+
+.input:enabled{
+    border: 2px solid green;
+}
+
+.input:disabled{
+    border: 2px solid red;
+}
+
+.input:in-range{
+    border: 2px solid green;
+}
+
+.input:out-of-range{
+    border: 2px solid red;
+} 
+
+.input:required{
+    border: 2px solid green;
+}
+
+.input:optional{
+    border: 2px solid gray;
+}
+
+.input:valid{
+    border: 2px solid green;
+}
+
+.input:invalid{
+    border: 2px solid red;
+}
+
+.input:read-only{
+    border: 2px solid gray;
+}
+
+.input:read-write{
+    border: 2px solid green;
+}
+
+.check:checked + span::before{ 
+    content: 'Chequeado';
+    color: green;
+}
+
+
+/*Utilizando After|Before con pseudoclases*/
+ input:out-of-range + span::after{
+    content: 'Fuera de rango';
+    color: red;
+    display: block;
+    margin: 10px;
+ }
+
+ input:in-range + span::after{
+    content: 'Rango correcto';
+    color: green; 
+    display: block;
+    margin: 10px;
+ }
+ 
+ /*
+    ----------------------------------------------------------------------------------------
+    -------------------------------------- Estructural -------------------------------------
+    ----------------------------------------------------------------------------------------
+
+    :root - Representa la raiz del documento (html) usando una pseudoclase tenemos más 
+            especificidad que si usáramos html
+    :empty - Esta pseudoclase se aplica para los elementos vacios, es decir, etiquetas 
+             que no tienen contenido. Ejemplo: 
+
+                .paragraph:empty{
+                    all:unset; Resetea los estilos que contenga la clase paragraph
+                }
+    
+    -child
+        :first-child - Selecciona al primer hijo (independientemente del tipo de etiqueta)
+        :last-child - Selecciona al ultimo hijo (independientemente del tipo de etiqueta)
+        :nth-child(parameter) - Selecciona al hijo n(independientemente del tipo de etiqueta)
+        :nth-last-child(parameter) Selecciona al hijo n empezando a contar desde el último (independientemente del tipo de etiqueta)
+        :only-child Selecciona al hijo unico(independientemente del tipo de etiqueta)
+    
+    -type
+        :first-of-type
+        :last-of-type
+        :nth-of-type(parameter)
+        :nth-last-of-type(parameter)
+        :only-of-type
+    
+        Valores posibles de parameter:
+            odd - Impares
+            even - Pares
+            numeros enteros - 2,3,4...
+            equaciones (1n,3n,4n+1,n+4,...)
+                n es un multiplicador va de 0 hasta que se quede sin elementos
+        
+Negation
+    :not() - Selecciona al elemento que no cumpla la condición, se puede poner cualquier selector salvo otro :not
+
+    por ejemplo:
+    .clase:not(div)     elementos que contengas la clase indicada pero no sean etiquetas div
+    .clase:not(.clase2) elementos que contengas la clase indicada pero que no posean la clase clase2
+*/

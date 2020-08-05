@@ -1,0 +1,124 @@
+.box{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    text-align: center; /*Alinear texto de forma centrada*/
+    line-height: 50px; /*Altura de linea*/
+}
+
+/*  ---------------------------------------------------------
+    ----------------------- POSITION ------------------------
+    Position: relative, absolute, fixed, sticky
+  
+    Estos tipos de posiciones permiten activar las siguientes 
+    propiedades  para mover un elemento: top, rigth, bottom, 
+    left y z-index
+*/
+
+/*  Relative
+    -Reserva espacio donde se encuentra el elemento inicialmente
+*/
+.box-relative-1{
+    background: yellow;
+}
+
+
+.box-relative-2{
+    background-color: yellowgreen;
+    position: relative; /*Pocisiona el elemento de forma relatica*/
+    top: -110px;
+    left: 110px;
+}
+
+/*  Absolute 
+    - NO reserva espacio donde se encuentra el elemento inicialmente
+    - Se posiciona con referencia al elemento que lo contiene. Si el 
+      elemento que lo contiene no posee posicionamiento, se posiciona 
+      con referencia al viewport 
+*/
+.container{
+    border: 10px solid black;
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+
+.box-absolute-1{
+    background: yellowgreen;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.box-absolute-2{
+    background: yellow;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.box-absolute-3{
+    background: green;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.box-absolute-4{
+    background: orangered;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.box-absolute-5{
+    background: red;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto; /*Tips para centrar elemento justo en medio: poner a  
+                    0 top, right, bottom y left. y dar un margin auto*/
+}
+
+/*  Fixed 
+    - NO reserva espacio donde se encuentra el elemento inicialmente
+    - Si no se ha especificado el ancho y alto, el espacio se ajusta al contenido
+*/
+body{
+    padding-top: 50px; /*Se agrega un padding al body para que el elemento menu no cubra otro */
+}
+
+.menu{
+    background: greenyellow;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.5em;
+
+    position: fixed;
+    top: 0;
+
+    width: 100%; /*Indicamos el ancho para que no se ajuste al contenido sino a todo el ancho de la pagina*/
+    height: 50px;
+    z-index: 100;
+}
+
+/*  Sticky (Combinación entre relative y fixed)
+    - Queda fijo al encontrarse con el top/bottom indicado (normalmente top:0)
+    - Reserva espacio donde se encuentra el elemento inicialmente
+*/
+.menu-2{
+    background: green;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.5em;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 200;
+}
+
+/*NOTA: al utilizar z-index, si se desea colocar un hijo atrás de
+        un elemento padre se debe de utilizar un z-index negativo*/
